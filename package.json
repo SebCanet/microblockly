@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "private": false,
   "description": "A lightweight Blockly implementation for browser and Electron",
-  "main": "dist/microblockly.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SebCanet/microblockly.git"
@@ -19,7 +24,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc && vite build --config vite.lib.config.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },
